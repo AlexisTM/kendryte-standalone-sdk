@@ -1,7 +1,7 @@
 # Kendryte K210 standalone SDK
 
-[![Build Status](https://travis-ci.org/kendryte/kendryte-standalone-sdk.svg)](https://travis-ci.org/kendryte/kendryte-standalone-sdk)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+Install the Kendryte toolchain to /opt/
+
 
 This SDK is for Kendryte K210 without OS support.
 If you have any questions, please be free to contact us.
@@ -16,7 +16,7 @@ If you want to start a new project, for instance, `hello_world`, you only need t
 
 ```bash
 mkdir build && cd build
-cmake .. -DPROJ=<ProjectName> -DTOOLCHAIN=/opt/riscv-toolchain/bin && make
+cmake .. -DPROJ=<project> -DTOOLCHAIN=/opt/kendryte-toolchain/bin -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=Release && make -j12
 ```
 
 - Windows
