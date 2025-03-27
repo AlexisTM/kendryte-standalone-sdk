@@ -10,7 +10,7 @@ If you have any questions, please be free to contact us.
 
 If you want to start a new project, for instance, `hello_world`, you only need to:
 
-- Linux and OSX
+### Linux and OSX
 
 `mkdir` your project in `src/`, `cd src && mkdir hello_world`, then put your codes in it, enter SDK root directory and build it.
 
@@ -19,7 +19,17 @@ mkdir build && cd build
 cmake .. -DPROJ=<project> -DTOOLCHAIN=/opt/kendryte-toolchain/bin -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=Release && make -j12
 ```
 
-- Windows
+#### Flash
+
+Use kflash.py
+```
+git clone https://github.com/kendryte/kflash.py
+python3 kflash.py -b 3000000 -B dan firmware.bin
+```
+
+
+### Windows
+
 
 Download and install latest CMake.
 
