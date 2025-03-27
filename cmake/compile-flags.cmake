@@ -1,6 +1,7 @@
 add_compile_flags(LD
         -nostartfiles
         -static
+        -lstdc++ -lsupc++
         -Wl,--gc-sections
         -Wl,-static
         -Wl,--start-group
@@ -11,7 +12,7 @@ add_compile_flags(LD
         -Wl,--no-relax
         -T ${SDK_ROOT}/lds/kendryte.ld
         )
-
+add_compile_flags(CXX -std=gnu++17 -fpermissive -fno-rtti)
 # C Flags Settings
 add_compile_flags(BOTH
         -mcmodel=medany
